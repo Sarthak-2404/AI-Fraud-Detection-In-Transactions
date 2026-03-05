@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0A2540;
+  --color-accent: #00C853;
+  --color-background: #020617;
+  /* Very dark slate/black */
+  --color-card: #0F172A;
+  /* Slate 900 for cards */
+  --color-alert: #FF5252;
+  --font-sans: "Inter", sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: #f8fafc;
+  /* Slate 50 */
+}
