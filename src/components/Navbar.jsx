@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { cn } from '../lib/utils';
+import DashboardButton from './DashboardButton';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -31,21 +32,14 @@ const Navbar = () => {
                 <div className="hidden md:flex space-x-8 text-sm font-medium items-center text-gray-300">
                     <a href="/#how-it-works" className="hover:text-accent transition-colors">How It Works</a>
                     <a href="/#features" className="hover:text-accent transition-colors">Features</a>
+                    <Link to="/dashboard" className="hover:text-accent transition-colors">Dashboard</Link>
                     <a href="/#footer" className="hover:text-accent transition-colors">FAQ's</a>
                 </div>
                 <div className="flex items-center gap-4">
                     <Link to="/login" className="text-gray-300 hover:text-white font-semibold text-sm transition-colors">
                         Login
                     </Link>
-                    <Link to="/signup">
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="bg-accent hover:bg-green-600 text-white px-5 py-2 rounded-full font-semibold transition-all shadow-[0_0_15px_rgba(0,200,83,0.4)] hover:shadow-[0_0_20px_rgba(0,200,83,0.6)] text-sm"
-                        >
-                            Sign Up
-                        </motion.button>
-                    </Link>
+                    <DashboardButton />
                 </div>
             </div>
         </motion.nav>

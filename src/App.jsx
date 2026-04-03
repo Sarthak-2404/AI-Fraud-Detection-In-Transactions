@@ -10,6 +10,7 @@ import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import Dashboard from './pages/Dashboard';
 import AboutUs from './pages/AboutUs';
 import Security from './pages/Security';
 import Pricing from './pages/Pricing';
@@ -45,6 +46,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/about" element={<><Navbar /><AboutUs /><Footer /></>} />
           <Route path="/how-it-works" element={<><Navbar /><HowItWorksPage /><Footer /></>} />
           <Route path="/security" element={<><Navbar /><Security /><Footer /></>} />
